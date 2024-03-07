@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background: rgb(37, 66, 228);
+  background: linear-gradient(
+    90deg,
+    rgba(37, 66, 228, 1) 16%,
+    rgba(247, 60, 240, 0.8464635854341737) 47%,
+    rgba(175, 0, 255, 1) 81%
+  );
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.weather-details {
+  width: 300px;
+  background: rgba(152, 77, 196, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(236, 234, 237, 0.2);
+  color: #fff;
+}
+
+.weather-details p {
+  padding-left: 3rem;
+}
+
+.weather-details:hover {
+  scale: 1.1;
+  transition: all 0.3s ease-in-out;
+}
+
+.forecast {
+  width: 180px;
+  border-radius: 10px;
+  background: rgba(79, 164, 164, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(240, 240, 243, 0.2);
+  color: #fff;
+}
