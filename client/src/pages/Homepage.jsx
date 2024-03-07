@@ -44,7 +44,7 @@ const Homepage = () => {
       try {
         setLoading(true);
         const res = await axios.post(
-          `${import.meta.env.VITE_API_URL}/api/v1/weather/current-weather-lat-lon`,
+          `/api/v1/weather/current-weather-lat-lon`,
           { units, lat: latitude, lon: longitude },
         );
         setWeatherData(res?.data?.weatherData);
@@ -60,7 +60,7 @@ const Homepage = () => {
       try {
         setForeCastLoader(true);
         const response = await axios.post(
-          `${import.meta.env.VITE_API_URL}/api/v1/weather/five-day-forecast-lat-lon`,
+          `/api/v1/weather/five-day-forecast-lat-lon`,
           { units, lat: latitude, lon: longitude },
         );
         setForeCast(response.data.weatherData.list);
@@ -76,7 +76,7 @@ const Homepage = () => {
       try {
         setForeCastLoader(true);
         const response = await axios.post(
-          `${import.meta.env.VITE_API_URL}/api/v1/weather/five-day-forecast-city`,
+          `/api/v1/weather/five-day-forecast-city`,
           { city: currentCity, units },
         );
         setForeCast(response.data.weatherData.list);
@@ -92,7 +92,7 @@ const Homepage = () => {
       try {
         setLoading(true);
         const response = await axios.post(
-          `${import.meta.env.VITE_API_URL}/api/v1/weather/current-weather-city`,
+          `/api/v1/weather/current-weather-city`,
           { city: currentCity, units },
         );
         setWeatherData(response?.data?.weatherData);
